@@ -5,6 +5,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 
 from .BaseModel import BaseDBModel, IDType, UUIDColumn, UUIDFKey
 from .Domain_Events import EventModel, EventInvitationModel, EventTypeModel
+from .Domain_Social import ActivityModel, ActivityTypeModel
 
 
 async def startEngine(connectionstring, makeDrop=False, makeUp=True):
@@ -31,10 +32,6 @@ async def startEngine(connectionstring, makeDrop=False, makeUp=True):
                 print(e)
                 print("Unable automaticaly create tables")
                 return None
-
-    # async_sessionMaker = sessionmaker(
-    #     asyncEngine, expire_on_commit=False, class_=AsyncSession
-    # )
 
     async_session_factory = async_sessionmaker(
         asyncEngine,
@@ -71,6 +68,6 @@ def ComposeConnectionString():
 __all__ = [
     'BaseDBModel', 'IDType', 'UUIDColumn', 'UUIDFKey',
     'EventModel', 'EventInvitationModel', 'EventTypeModel',
-    'startEngine', 'ComposeConnectionString', 'EventTypeModel'
+    'ActivityModel', 'ActivityTypeModel',
+    'startEngine', 'ComposeConnectionString'
 ]
-

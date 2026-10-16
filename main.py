@@ -31,3 +31,8 @@ app = FastAPI(
     lifespan=lifespan,
 )
 app.include_router(GraphQLRouter(schema, context_getter=get_gql_context), prefix='/gql')
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
