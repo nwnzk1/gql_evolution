@@ -6,7 +6,7 @@ import uuid
 from contextlib import asynccontextmanager
 
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import inspect as sa_inspect
+from sqlalchemy import inspect as sa_inspect, true
 from sqlalchemy.exc import NoInspectionAvailable
 
 from uoishelpers.dataloaders import readJsonFile
@@ -62,7 +62,7 @@ async def init_database_data(session: AsyncSession, get_demodata=get_demodata) -
         if Model.__name__.endswith("TypeModel")
     ]
 
-    isDemo = os.environ.get("DEMODATA", None) in ["True", "true", True]
+    isDemo = true #os.environ.get("DEMODATA", None) in ["True", "true", True]
 
     ModelNamesToImport = ModelNames if isDemo else TypeNames
 
