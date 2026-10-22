@@ -1,9 +1,93 @@
 {
-    "eventtypes": [
-    ],
-    "events": [
-    ],
-    "event_invitations": [
-    ]
-
+  "eventtypes": [],
+  "events": [],
+  "event_invitations": [],
+  "activitytypes": [
+    {
+      "id": "f7d77c67-3e0a-4720-90c0-db1ee80e4811",
+      "parent_id": null,
+      "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811",
+      "name": "activity",
+      "label": "Aktivita",
+      "description": "Kořen stromu typů aktivit"
+    },
+    {
+      "id": "5da9bffc-e42a-4f1c-887c-196969c134dd",
+      "parent_id": "f7d77c67-3e0a-4720-90c0-db1ee80e4811",
+      "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.5da9bffc-e42a-4f1c-887c-196969c134dd",
+      "name": "created",
+      "label": "Vytvořeno",
+      "description": "Vznik entity"
+    },
+    {
+      "id": "f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
+      "parent_id": "f7d77c67-3e0a-4720-90c0-db1ee80e4811",
+      "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
+      "name": "changed",
+      "label": "Změněno",
+      "description": "Změna entity"
+    },
+    {
+      "id": "d0e9c364-298d-4cad-9843-08607bf88198",
+      "parent_id": "f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
+      "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51.d0e9c364-298d-4cad-9843-08607bf88198",
+      "name": "state_changed",
+      "label": "Změna stavu",
+      "description": "Změna stavu entity"
+    },
+    {
+      "id": "262f1f7a-5ef9-48d3-8408-69a50ce865d4",
+      "parent_id": "f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
+      "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51.262f1f7a-5ef9-48d3-8408-69a50ce865d4",
+      "name": "member_added",
+      "label": "Přidán člen",
+      "description": "Do entity byl přidán člen"
+    },
+    {
+      "id": "f5cfecdc-051f-464c-a6c6-fcd3a1ca29b9",
+      "parent_id": "f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
+      "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51.f5cfecdc-051f-464c-a6c6-fcd3a1ca29b9",
+      "name": "document_added",
+      "label": "Přidán dokument",
+      "description": "K entitě byl přidán dokument"
+    }
+  ],
+  "activities": [
+    {
+      "id": "204ab7c4-99ba-452a-8447-958fa57af6e4",
+      "entity_id": "25fcb083-c0b0-4b06-8c2a-0c67cbe5f7ee",
+      "entity_type_id": "1c0809e7-4d3c-4d9a-9171-791641b6a8c8",
+      "activity_type_id": "5da9bffc-e42a-4f1c-887c-196969c134dd",
+      "actor_id": "f3a3bad1-3e6e-4649-bb79-3006f79ed5ff",
+      "title": "Skupina vytvořena",
+      "content": "Uživatel vytvořil novou skupinu."
+    },
+    {
+      "id": "f635ec0e-8ff3-412b-a91b-8c634b9ac156",
+      "entity_id": "25fcb083-c0b0-4b06-8c2a-0c67cbe5f7ee",
+      "entity_type_id": "1c0809e7-4d3c-4d9a-9171-791641b6a8c8",
+      "activity_type_id": "262f1f7a-5ef9-48d3-8408-69a50ce865d4",
+      "actor_id": "1cb4274a-7f19-4314-b9e7-d389d4fe98ba",
+      "title": "Přidán člen",
+      "content": "Do skupiny byl přidán nový člen."
+    },
+    {
+      "id": "11c3a8a0-5568-42c2-ad6f-3341c6dd9238",
+      "entity_id": "bdd016a4-c144-4793-abf7-f52e55563697",
+      "entity_type_id": "1c0809e7-4d3c-4d9a-9171-791641b6a8c8",
+      "activity_type_id": "f5cfecdc-051f-464c-a6c6-fcd3a1ca29b9",
+      "actor_id": "f3a3bad1-3e6e-4649-bb79-3006f79ed5ff",
+      "title": "Nahrán dokument",
+      "content": "K projektu byl přidán dokument."
+    },
+    {
+      "id": "e9b1a09a-c88c-4110-9495-7ec3cc977723",
+      "entity_id": "5f733a5a-8226-4b11-95aa-33af5e81c255",
+      "entity_type_id": "1c0809e7-4d3c-4d9a-9171-791641b6a8c8",
+      "activity_type_id": "d0e9c364-298d-4cad-9843-08607bf88198",
+      "actor_id": "1cb4274a-7f19-4314-b9e7-d389d4fe98ba",
+      "title": "Stav změněn",
+      "content": "Stav byl změněn na schváleno."
+    }
+  ]
 }
