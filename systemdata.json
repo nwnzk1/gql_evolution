@@ -9,7 +9,8 @@
       "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811",
       "name": "activity",
       "label": "Aktivita",
-      "description": "Kořen stromu typů aktivit"
+      "description": "Kořen stromu typů aktivit",
+      "_chunk": 0
     },
     {
       "id": "5da9bffc-e42a-4f1c-887c-196969c134dd",
@@ -17,7 +18,8 @@
       "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.5da9bffc-e42a-4f1c-887c-196969c134dd",
       "name": "created",
       "label": "Vytvořeno",
-      "description": "Vznik entity"
+      "description": "Vznik entity",
+      "_chunk": 1
     },
     {
       "id": "f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
@@ -25,7 +27,8 @@
       "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51",
       "name": "changed",
       "label": "Změněno",
-      "description": "Změna entity"
+      "description": "Změna entity",
+      "_chunk": 1
     },
     {
       "id": "d0e9c364-298d-4cad-9843-08607bf88198",
@@ -33,7 +36,8 @@
       "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51.d0e9c364-298d-4cad-9843-08607bf88198",
       "name": "state_changed",
       "label": "Změna stavu",
-      "description": "Změna stavu entity"
+      "description": "Změna stavu entity",
+      "_chunk": 2
     },
     {
       "id": "262f1f7a-5ef9-48d3-8408-69a50ce865d4",
@@ -41,7 +45,8 @@
       "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51.262f1f7a-5ef9-48d3-8408-69a50ce865d4",
       "name": "member_added",
       "label": "Přidán člen",
-      "description": "Do entity byl přidán člen"
+      "description": "Do entity byl přidán člen",
+      "_chunk": 2
     },
     {
       "id": "f5cfecdc-051f-464c-a6c6-fcd3a1ca29b9",
@@ -49,7 +54,8 @@
       "path": "f7d77c67-3e0a-4720-90c0-db1ee80e4811.f4be6fd0-7614-4f07-ad8e-af5dc822ea51.f5cfecdc-051f-464c-a6c6-fcd3a1ca29b9",
       "name": "document_added",
       "label": "Přidán dokument",
-      "description": "K entitě byl přidán dokument"
+      "description": "K entitě byl přidán dokument",
+      "_chunk": 2
     }
   ],
   "activities": [
