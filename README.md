@@ -1,3 +1,9 @@
+# Deník vývoje
+
+
+
+
+
 # Event boilerplate project
 
 Demonstrační boilerplate pro doménu `Event / EventInvitation` podle funkčního vzoru ze `src.zip`.
