@@ -6,6 +6,9 @@ from src.Dataloaders import LoaderMap
 if typing.TYPE_CHECKING:
     from src.ServiceDefinitions.Domain_Events.EventService import EventService as _EventService
     from src.ServiceDefinitions.Domain_Events.EventInvitationService import EventInvitationService as _EventInvitationService
+    # Doména Social: importy pouze pro typovou kontrolu (nápověda v IDE), za běhu se neprovádějí.
+    from src.ServiceDefinitions.Domain_Social.ActivityService import ActivityService as _ActivityService
+    from src.ServiceDefinitions.Domain_Social.ActivityTypeService import ActivityTypeService as _ActivityTypeService
 
 
 @dataclasses.dataclass(frozen=True)
@@ -19,6 +22,19 @@ class ServiceRegistry:
     def EventInvitationService(self) -> type['_EventInvitationService']:
         from src.ServiceDefinitions.Domain_Events.EventInvitationService import EventInvitationService
         return EventInvitationService
+
+    # Doména Social. Název property MUSÍ končit na "Service" – podle toho services nachází
+    # CLI (ServiceDefinitions/main.py) i generický test tests/services/test_servicedefinitions_crud.py.
+    # Import je až uvnitř property (lazy), aby nevznikaly cyklické importy.
+    @property
+    def ActivityService(self) -> type['_ActivityService']:
+        from src.ServiceDefinitions.Domain_Social.ActivityService import ActivityService
+        return ActivityService
+
+    @property
+    def ActivityTypeService(self) -> type['_ActivityTypeService']:
+        from src.ServiceDefinitions.Domain_Social.ActivityTypeService import ActivityTypeService
+        return ActivityTypeService
 
 
 SERVICES = ServiceRegistry()
